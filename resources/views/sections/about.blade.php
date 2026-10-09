@@ -14,7 +14,7 @@
                 <h2 class="fw-bold mb-3">Tentang Saya</h2>
                 <p class="lead text-secondary">{{ $profile->bio ?? '' }}</p>
                 <div class="row my-4">
-                    <div class="col-sm-6 mb-2">
+                    <div class="col-sm-6 mb-2 text-dark">
                         <strong>Email:</strong> {{ $profile->email ?? '-' }}
                     </div>
                     {{-- <div class="col-sm-6 mb-2">
