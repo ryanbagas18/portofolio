@@ -2,7 +2,7 @@
     <div class="container py-5">
         <div class="row align-items-center">
 
-      
+
             <div class="col-lg-8 col-md-7 mb-4 mb-lg-0">
                 <h1 class="display-4 fw-bold mb-3 text-dark">Hello, I'm {{ $profile->name ?? 'Ryan Bagas Pratama' }}</h1>
                 <h3 class="text-primary mb-4">
@@ -14,7 +14,7 @@
                     manajemen tim melalui pengalaman sebagai Trainer UBAYA Choir dan Panitia FESPA UBAYA.
                 </p>
 
-      
+
                 <div class="d-flex flex-wrap gap-3 mt-4">
                     <a href="{{ asset('storage/files/CV_Ryan_Bagas.pdf') }}" class="btn btn-primary btn-lg px-4 py-2"
                         download target="_blank">

@@ -1,6 +1,9 @@
 <section id="certifications" class="bg-light">
     <div class="container py-5">
-        <h2 class="fw-bold text-center mb-5">Lisensi & Sertifikasi</h2>
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark mb-2">Certifications</h2>
+            <div class="bg-primary mx-auto rounded" style="width: 60px; height: 2px;"></div>
+        </div>
         <div class="row g-4">
             @forelse($certifications as $cert)
                 <div class="col-md-6 col-lg-4">
@@ -9,10 +12,12 @@
                             <h5 class="fw-bold mb-1">{{ $cert->name }}</h5>
                             <p class="text-primary small mb-2">{{ $cert->issuer }}</p>
                             <p class="text-muted small mb-3">
-                                Terbit: {{ $cert->issue_date ? \Carbon\Carbon::parse($cert->issue_date)->format('M Y') : '-' }}
+                                Terbit:
+                                {{ $cert->issue_date ? \Carbon\Carbon::parse($cert->issue_date)->format('M Y') : '-' }}
                             </p>
-                            @if($cert->credential_url)
-                                <a href="{{ $cert->credential_url }}" target="_blank" class="btn btn-sm btn-outline-secondary mt-auto">
+                            @if ($cert->credential_url)
+                                <a href="{{ $cert->credential_url }}" target="_blank"
+                                    class="btn btn-sm btn-outline-primary mt-auto">
                                     <i class="bi bi-box-arrow-up-right me-1"></i>Lihat Kredensial
                                 </a>
                             @endif

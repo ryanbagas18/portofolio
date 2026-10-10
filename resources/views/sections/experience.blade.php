@@ -1,6 +1,9 @@
 <section id="experience" class="bg-white">
     <div class="container py-5">
-        <h2 class="fw-bold text-center mb-5">Pengalaman</h2>
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark mb-2">Experience</h2>
+            <div class="bg-primary mx-auto rounded" style="width: 60px; height: 2px;"></div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="timeline">
@@ -13,12 +16,14 @@
                                         <h6 class="text-primary mb-0">{{ $exp->organization }}</h6>
                                     </div>
                                     <span class="badge bg-light text-dark border">
-                                        {{ $exp->start_date ? \Carbon\Carbon::parse($exp->start_date)->format('M Y') : '' }} - 
+                                        {{ $exp->start_date ? \Carbon\Carbon::parse($exp->start_date)->format('M Y') : '' }}
+                                        -
                                         {{ $exp->is_current ? 'Saat Ini' : ($exp->end_date ? \Carbon\Carbon::parse($exp->end_date)->format('M Y') : '') }}
                                     </span>
                                 </div>
-                                @if($exp->location)
-                                    <p class="text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i>{{ $exp->location }}</p>
+                                @if ($exp->location)
+                                    <p class="text-muted small mb-2"><i
+                                            class="bi bi-geo-alt me-1"></i>{{ $exp->location }}</p>
                                 @endif
                                 <p class="card-text text-secondary mb-0">{{ $exp->description }}</p>
                             </div>

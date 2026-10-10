@@ -9,5 +9,5 @@
     @include('sections.projects')
     @include('sections.achievements')
     @include('sections.certifications')
-    @include('sections.contact')
+    {{-- @include('sections.contact') --}}
 @endsection
